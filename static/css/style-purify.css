@@ -109,6 +109,14 @@ h3,h4,h5 {
   background: #293846;
 }
 
+.nav.nav-second-level>li.active {
+  border: none;
+}
+
+.nav.nav-second-level.collapse[style] {
+  height: auto!important;
+}
+
 .nav-header a {
   color: #DFE4ED;
 }
@@ -144,6 +152,51 @@ h3,h4,h5 {
   position: absolute;
   right: 6px;
   top: 12px;
+}
+
+.nav-second-level li {
+  border-bottom: none!important;
+}
+
+.nav-second-level li a {
+  padding: 7px 10px 7px 52px;
+}
+
+.nav-second-level li:last-child {
+  margin-bottom: 10px;
+}
+
+.mini-navbar .nav li:focus>.nav-second-level {
+  display: block;
+  border-radius: 0 2px 2px 0;
+  min-width: 140px;
+  height: auto;
+}
+
+body.mini-navbar .navbar-default .nav>li>.nav-second-level li a {
+  font-size: 12px;
+  border-radius: 3px;
+}
+
+.mini-navbar .nav-second-level li a {
+  padding: 10px 10px 10px 15px;
+}
+
+.mini-navbar .nav-second-level {
+  position: absolute;
+  left: 70px;
+  top: 0;
+  background-color: #2f4050;
+  padding: 10px;
+  font-size: 12px;
+}
+
+.canvas-menu.mini-navbar .nav-second-level {
+  background: #293846;
+}
+
+.mini-navbar li.active .nav-second-level {
+  left: 65px;
 }
 
 .navbar-default .landing_link a {
@@ -224,12 +277,37 @@ body.canvas-menu.mini-navbar #page-wrapper {
   margin: 0;
 }
 
+.canvas-menu.mini-navbar .nav li:focus>.nav-second-level {
+  display: block;
+  height: auto;
+}
+
+body.canvas-menu.mini-navbar .navbar-default .nav>li>.nav-second-level li a {
+  font-size: 13px;
+  border-radius: 3px;
+}
+
+.canvas-menu.mini-navbar .nav-second-level {
+  position: relative;
+  padding: 0;
+  font-size: 13px;
+  left: 0;
+}
+
+.canvas-menu.mini-navbar li.active .nav-second-level {
+  left: 0;
+}
+
 body.canvas-menu.mini-navbar .navbar-default .nav>li>a {
   font-size: 13px;
 }
 
 body.canvas-menu.mini-navbar .nav-label,body.canvas-menu.mini-navbar .navbar-default .nav li a span {
   display: inline;
+}
+
+.canvas-menu.mini-navbar .nav-second-level li a {
+  padding: 7px 10px 7px 52px;
 }
 
 .top-navigation #page-wrapper {
@@ -740,7 +818,7 @@ button.dim:active:before {
   color: #ed5565;
 }
 
-.author-info,.dd-item>button,.dd-item>button:before,.forum-avatar,.forum-icon,.forum-info,.vertical-timeline-icon {
+.author-info,.dd-item>button,.dd-item>button:before,.vertical-timeline-icon {
   text-align: center;
 }
 
@@ -841,87 +919,14 @@ label.error {
   width: 100%;
 }
 
-.forum-avatar {
-  float: left;
-  margin-right: 20px;
-  width: 110px;
-}
-
-.forum-avatar .img-circle {
-  height: 48px;
-  width: 48px;
-}
-
 .author-info {
   color: #676a6c;
   font-size: 11px;
   margin-top: 5px;
 }
 
-.forum-desc,.forum-item small {
-  color: #999;
-}
-
-.forum-post-info {
-  padding: 9px 12px 6px;
-  background: #f9f9f9;
-  border: 1px solid #f1f1f1;
-}
-
 .mid-icon {
   font-size: 66px;
-}
-
-.forum-item {
-  margin: 10px 0;
-  padding: 10px 0 20px;
-  border-bottom: 1px solid #f1f1f1;
-}
-
-.forum-container,.forum-post-container {
-  padding: 30px!important;
-}
-
-.forum-title {
-  margin: 15px 0;
-}
-
-.forum-icon {
-  float: left;
-  width: 30px;
-  margin-right: 20px;
-}
-
-a.forum-item-title {
-  color: inherit;
-  display: block;
-  font-size: 18px;
-  font-weight: 600;
-}
-
-a.forum-item-title:hover {
-  color: inherit;
-}
-
-.forum-icon .fa {
-  font-size: 30px;
-  margin-top: 8px;
-  color: #9b9b9b;
-}
-
-.forum-item.active .fa,.forum-item.active a.forum-item-title {
-  color: #3385FF;
-}
-
-@media (max-width:992px) {
-  .forum-info {
-    margin: 15px 0 10px;
-    display: none;
-  }
-
-  .forum-desc {
-    float: none!important;
-  }
 }
 
 .vertical-container {
@@ -1691,20 +1696,6 @@ a.close-canvas-menu:hover {
   margin-top: 10px;
 }
 
-.search-result h3 {
-  margin-bottom: 0;
-  color: #1E0FBE;
-}
-
-.search-result .search-link {
-  color: #006621;
-}
-
-.search-result p {
-  font-size: 12px;
-  margin-top: 5px;
-}
-
 .contact-box {
   border: 1px solid #e7eaec;
   padding: 20px;
@@ -1720,6 +1711,10 @@ a.close-canvas-menu:hover {
   z-index: 100;
   margin: 0 auto;
   padding-top: 40px;
+}
+
+.client-link {
+  font-weight: 600;
 }
 
 .middle-box h1 {
@@ -1924,8 +1919,22 @@ ul.clear-list:first-child {
   line-height: 22px;
 }
 
+.client-link,.client-link:hover {
+  color: inherit;
+}
+
 .article h1,.blog h2 {
   font-weight: 700;
+}
+
+.client-avatar {
+  width: 42px;
+}
+
+.client-avatar img {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
 }
 
 .contact-type {
