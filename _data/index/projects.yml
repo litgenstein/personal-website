@@ -36,13 +36,6 @@
   img: rsser
   desc: Rsser is an Ionic application, with this application we can read news and articles freely, you can add rss address from the given list and add it manually.
 
-- name: LeetCode
-  i18n: leetcode
-  gh_user: kamyu104
-  repo: LeetCode
-  img: leetcode
-  desc: LeetCode is a website which has many valuable algorithmic questions, this is a project of kamyu104's, I forked it and added more solutions, if you like Python you can find fun from this project.
-
 - name: FamilyCODE Wchat
   i18n: familycode
   img: familycode
