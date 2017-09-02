@@ -4,8 +4,7 @@ $(document).ready(function() {
     $.ajax({
         type: "get",
         async: false,
-        url: "https://api.jarrekk.com/api/v1.0/jalpc/pv_count",
-        // url: "http://127.0.0.1:5000/api/v1.0/jalpc/pv_count",
+        url: "https://miniapp.jack003.com/counter.cgi",
         dataType: "jsonp",
         jsonp: "callback",
         jsonpCallback: "flightHandler",
