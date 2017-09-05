@@ -166,7 +166,7 @@ h3,h4,h5 {
   margin-bottom: 10px;
 }
 
-.mini-navbar .nav li:focus>.nav-second-level {
+.mini-navbar .nav li:focus>.nav-second-level,body:not(.fixed-sidebar):not(.canvas-menu).mini-navbar .nav li:hover>.nav-second-level {
   display: block;
   border-radius: 0 2px 2px 0;
   min-width: 140px;
@@ -253,6 +253,10 @@ body.fixed-nav.fixed-nav-basic.body-small .navbar-fixed-top {
 }
 
 body.mini-navbar .nav-label,body.mini-navbar .navbar-default .nav li a span {
+  display: none;
+}
+
+body:not(.fixed-sidebar):not(.canvas-menu).mini-navbar .nav-second-level {
   display: none;
 }
 
